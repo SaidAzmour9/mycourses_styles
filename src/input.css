@@ -1,0 +1,63 @@
+/* input.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/Gilroy-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./fonts/Gilroy-Regular.ttf') format('truetype');
+  }
+
+  .btn {
+    @apply bg-primary70 hover:w-[102px] hover:bg-primary80 text-white disabled:opacity-40 rounded-2xl disabled:border disabled:border-black60 disabled:text-black60 disabled:bg-black30 transition-all duration-300 ease-in-out;
+  }
+
+  .i-btn {
+    @apply bg-primary70 p-4 hover:w-[136px] hover:bg-primary80 text-white disabled:opacity-40 rounded-2xl disabled:border disabled:border-black60 disabled:text-black60 disabled:bg-black30 transition-all duration-300 ease-in-out flex items-center justify-center ;
+  }
+  .i-btn img{
+    @apply w-[21px] h-[20px] mr-2;
+  }
+  
+  .btn-lg {
+    @apply w-[125px] h-[50px] font-bold text-xl transition-all ease-in-out;
+  }
+  .btn-md {
+    @apply w-[97px] h-[41px] font-bold text-lg hover:w-[80px]  transition-all ease-in-out;
+  }
+  .btn-sm {
+    @apply w-[78px] h-[32px] font-bold hover:w-[65px] text-base  transition-all ease-in-out;
+  }
+  .ibtn-lg {
+    @apply w-[159px] h-[50px] font-bold text-xl transition-all ease-in-out;
+  }
+  .ibtn-md {
+    @apply w-[126px] h-[41px] font-bold text-lg hover:w-[109px]  transition-all ease-in-out;
+  }
+  .ibtn-sm {
+    @apply w-[102px] h-[32px] font-bold hover:w-[89px] text-base  transition-all ease-in-out;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent text-black60 border border-black60 rounded-2xl hover:bg-transparent  transition-all duration-300 ease-in-out;
+  }
+
+  .datepicker-cell {
+    @apply hover:bg-success text-white active:bg-success focus:bg-success;
+}
+  
+.datepicker svg{}
+  
+}

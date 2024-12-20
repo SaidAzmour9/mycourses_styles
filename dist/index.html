@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <style>
+    .datepicker-cell::selection, .datepicker-cellseleted {
+    background-color: white; 
+    color: white;
+  }
+
+
+
+  </style>
+</head>
+<body class="bg-[#F4F4F4]">
+  <h2> large Bouttons with icon  and text</h2>
+  <div class="flex p-4">
+    <button class="i-btn ibtn-lg"><img src="../src/imags/icons/timelapse_24px.svg" alt=""> Enabled</button>
+    <span class="p-3"></span>
+    <button class="i-btn ibtn-lg" disabled><img src="../src/imags/icons/lg-icon-out.png" alt="">disabled</button>
+    <span class="p-3"></span>
+    <button class="i-btn ibtn-lg btn-outline"><img src="../src/imags/icons/lg-icon-out.png" alt="">Outline</button><br>
+    <span class="p-3"></span>
+  </div>
+  <h2> Medium Bouttons with icon  and text</h2>
+  <div class="flex p-4">
+    <button class="i-btn ibtn-md"><img src="../src/imags/icons/timelapse_24px.svg" alt=""> Enabled</button>
+    <span class="p-3"></span>
+    <button class="i-btn ibtn-md" disabled><img src="../src/imags/icons/lg-icon-out.png" alt="">disabled</button>
+    <span class="p-3"></span>
+    <button class="i-btn ibtn-md btn-outline"><img src="../src/imags/icons/lg-icon-out.png" alt="">Outline</button>
+    <span class="p-3"></span>
+  </div>
+  <h2> Small Bouttons with icon and text </h2>
+  <div class="flex p-4">
+    <button class="i-btn ibtn-sm"><img src="../src/imags/icons/timelapse_24px.svg" alt=""> Enabled</button>
+    <span class="p-3"></span>
+    <button class="i-btn ibtn-sm" disabled><img src="../src/imags/icons/lg-icon-out.png" alt="">disabled</button>
+    <span class="p-3"></span>
+    <button class="i-btn ibtn-sm btn-outline"><img src="../src/imags/icons/lg-icon-out.png" alt="">Outline</button>
+    <span class="p-3"></span>
+  </div>
+  <hr class="pb-5">
+  <h2>Large Bouttons without icon</h2>
+  <div class="flex p-4 space-x-3">
+    <button class="btn btn-lg">Enabled</button>
+    <button class="btn btn-lg " disabled>disabled</button>
+    <button class="btn btn-lg btn-outline">Enabled</button>
+  </div>
+  <h2>Medium Bouttons without icon</h2>
+  <div class="flex p-4 space-x-3">
+    <button class="btn btn-md">Enabled</button>
+    <button class="btn btn-md " disabled>disabled</button>
+    <button class="btn btn-md btn-outline">Enabled</button>
+  </div>
+  <h2>Small Bouttons without icon</h2>
+  <div class="flex p-4 space-x-3">
+    <button class="btn btn-sm">Enabled</button>
+    <button class="btn btn-sm " disabled>disabled</button>
+    <button class="btn btn-sm btn-outline">Enabled</button>
+  </div>
+
+  <hr>
+  <div class="relative w-[300px] m-20">
+    <input type="text" id="inp" class="block w-[282px] h-[48px] outline-none border-b-2 border-gray-300 px-2.5 pb-2.5 pt-5 focus:ring-0 appearance-none peer" placeholder=" " aria-label="Label"/>
+    <label for="inp" class="absolute duration-300 transform scale-75 top-4 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Label</label>
+    <a href="#"><img src="../src/imags/icons/lg-icon-out.png" alt="Icon" class="absolute top-4 right-4"/>
+    </a>
+  </div>
+  <div>
+    <div class="relative w-[300px] m-20">
+      <input type="text" id="inp" class="block w-[282px] h-[48px]  outline-none border-b-2 border-b-error px-2.5 pb-2.5 pt-5 focus:ring-0 appearance-none peer" placeholder="">
+      <label for="inp" class="absolute duration-300 transform scale-75 top-4 z-10 origin-[0] start-2.5  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4" >Label</label>
+      <a href=""><img src="../src/imags/icons/lg-icon-out.png" alt="" class="absolute  top-4 right-4"></a>
+      <p class="text-error">Error message here!</p>
+  </div>
+
+  </div>
+
+
+  <!-- datepcker -->
+   
+  
+  <div 
+  id="datepicker-inline" 
+  inline-datepicker theme={theme}
+  data-date="02/25/2024" 
+  class="bg-success border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-success focus:border-suring-success block ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-success dark:focus:border-suring-success">
+</div>
+
+
+  
+  
+  
+  
+<form class="m-7">   
+  <div class="relative w-[400px] h-[37px] border-none">
+      <input type="text" class="bg-white90 w-full h-full placeholder-black60 outline-none border-none" placeholder="Search for courses" required />
+      <button type="button" class="absolute inset-y-0 end-0 flex items-center pe-3">
+          <img src="../src/imags/icons/search_24px.png" alt="">
+      </button>
+  </div>
+</form>
+
+
+
+ 
+
+
+<script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+<script>
+  const theme = {
+  root: {
+    input: {
+      field: {
+        input: {
+          base: 'bg-error'
+        }
+      }
+    }
+  }
+  }
+</script>
+
+</body>
+</html>
