@@ -5,16 +5,162 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
   <style>
-    .datepicker-cell::selection, .datepicker-cellseleted {
-    background-color: white; 
-    color: white;
-  }
-
-
+        .datepicker-cell.selected.focused {
+        background-color: #00DDC0; 
+        color: white;
+      }
+      .datepicker-controls button{
+        font-weight: 400;
+        
+        font-size: 12px;
+      }
+      .custom-select select {
+      display: none;
+    }
+    .select-selected.select-arrow-active:after {
+      top: 7px;
+    }
+    .select-items div,.select-selected {
+      color: #1B1B1BE5;
+      font-weight: 400;
+      font-size: 12px;
+      padding: 8px 10px;
+      background-color: #ffffff;
+      cursor: pointer;
+    }
+    .select-hide {
+      display: none;
+    }
+    .select-items div:hover, .same-as-selected {
+      background-color: #00DDC0;
+      color: #ffffff;
+}
 
   </style>
 </head>
 <body class="bg-[#F4F4F4]">
+  <header class="">
+    <div class="navbar flex items-center my-5 w-11/12">
+        <div class="flex items-center justify-center w-1/3">
+            <a href="#" class=" w-28"><img src="../src/imags/icons/Logo.png" alt="logo" class="w-28 max-w-24"></a>
+            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-black focus:ring-0 focus:outline-none font-medium rounded-lg text-lg ml-2  text-center inline-flex items-center " type="button">Browse<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>
+            </button>
+            <div id="dropdown" class="hidden z-10 bg-white rounded-lg shadow w-44">
+                <ul class=" py-2 text-sm text-gray-700 dark:text-gray-200"                   aria-labelledby="dropdownDefaultButton">
+                        <li>
+                            <a href="#" class="block px-4 py-2 text-black hover:bg-gray-600 hover:text-white">Settings</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 text-black hover:bg-gray-600 hover:text-white">Settings</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 text-black hover:bg-gray-600 hover:text-white">Settings</a>
+                        </li>
+                        
+                </ul>
+            </div>
+        </div>
+        <div class="flex items-center w-2/3 space-x-3">
+            <form class="">   
+                <div class="relative w-30px h-[37px] rounded-lg border-none outline-none focus:border-none active:border-none">
+                    <input type="text" class="bg-white90 rounded-lg f w-full h-full placeholder-black60  focus:outline-none border-none focus:border-none active:border-none" placeholder="Search for courses" required />
+                    <button type="button" class="absolute inset-y-0 end-0 flex items-center pe-3">
+                        <img src="../src/imags/icons/search_24px.png" alt="">
+                    </button>
+                </div>
+            </form>
+            <ul class="flex items-center space-x-3">
+                <li><a href="#" class="text-lg font-normal text-black90">Become Instructor</a></li>
+                <li><a href="#"><img src="../src/imags/icons/shopping_cart_24px.png" alt=""></a></li>
+                <li><button class="btn btn-sm btn-outline">Login</button></li>
+                <li><button class="btn ibtn-md">Sign up</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="my-10">
+    </div>
+    <div class="navbar flex items-center justify-between my-5 w-11/12 px-[115px]">
+      <div class="flex items-center justify-center">
+          <a href="#" class=" w-28"><img src="../src/imags/icons/Logo.png" alt="logo" class="w-28 max-w-24"></a>
+          <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-black focus:ring-0 focus:outline-none font-medium rounded-lg text-lg ml-2  text-center inline-flex items-center " type="button">Browse<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>
+          </button>
+          <div id="dropdown" class="hidden z-10 bg-white rounded-lg shadow w-44">
+              <ul class=" py-2 text-sm text-gray-700 dark:text-gray-200"                   aria-labelledby="dropdownDefaultButton">
+                      <li>
+                          <a href="#" class="block px-4 py-2 text-black hover:bg-gray-600 hover:text-white">Settings</a>
+                      </li>
+                      <li>
+                          <a href="#" class="block px-4 py-2 text-black hover:bg-gray-600 hover:text-white">Settings</a>
+                      </li>
+                      <li>
+                          <a href="#" class="block px-4 py-2 text-black hover:bg-gray-600 hover:text-white">Settings</a>
+                      </li>
+                      
+              </ul>
+          </div>
+      </div>
+      <div class="flex items-center space-x-3">
+          <form class="">   
+              <div class="relative w-[400px] h-[37px] rounded-lg border-none outline-none focus:border-none active:border-none">
+                  <input type="text" class="bg-white90 rounded-lg f w-full h-full placeholder-black60  focus:outline-none border-none focus:border-none active:border-none" placeholder="Search for courses" required />
+                  <button type="button" class="absolute inset-y-0 end-0 flex items-center pe-3">
+                      <img src="../src/imags/icons/search_24px.png" alt="">
+                  </button>
+              </div>
+          </form>
+          <ul class="flex items-center space-x-3">
+              <li><a href="#" class="text-lg font-normal text-black90">Become Instructor</a></li>
+              <li><a href="#"><img src="../src/imags/icons/shopping_cart_24px.png" alt=""></a></li>
+              <li><a href="#"><img src="../src/imags/icons/notifications_none_24px.png" alt=""></a></li>
+              <li><a href="#"><img src="../src/imags/icons/Mask Group.png" alt=""></a></li>
+              
+          </ul>
+      </div>
+      
+  </div>
+</header>
+<div class="flex items-center justify-between px-[120px]">
+    <div class="flex items-center justify-center">
+      <a href="#" class=" w-28"><img src="../src/imags/icons/Logo.png" alt="logo" class="w-28 max-w-24"></a>
+      <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-black focus:ring-0 focus:outline-none font-medium rounded-lg text-lg ml-2  text-center inline-flex items-center " type="button">Browse<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>
+      </button>
+      <div id="dropdown" class="hidden z-10 bg-white rounded-lg shadow w-44">
+          <ul class=" py-2 text-sm text-gray-700 dark:text-gray-200"                   aria-labelledby="dropdownDefaultButton">
+                  <li>
+                      <a href="#" class="block px-4 py-2 text-black hover:bg-gray-600 hover:text-white">Settings</a>
+                  </li>
+                  <li>
+                      <a href="#" class="block px-4 py-2 text-black hover:bg-gray-600 hover:text-white">Settings</a>
+                  </li>
+                  <li>
+                      <a href="#" class="block px-4 py-2 text-black hover:bg-gray-600 hover:text-white">Settings</a>
+                  </li>
+                  
+          </ul>
+      </div>
+    </div>
+  <div>
+    <form class="">   
+      <div class="relative w-[400px] h-[37px] rounded-lg border-none outline-none focus:border-none active:border-none">
+          <input type="text" class="bg-white90 rounded-lg f w-full h-full placeholder-black60  focus:outline-none border-none focus:border-none active:border-none" placeholder="Search for courses" required />
+          <button type="button" class="absolute inset-y-0 end-0 flex items-center pe-3">
+              <img src="../src/imags/icons/search_24px.png" alt="">
+          </button>
+      </div>
+    </form>
+  </div>
+  <ul class="flex items-center space-x-3">
+    <li><a href="#" class="text-lg font-normal text-black90">Become Instructor</a></li>
+    <li><a href="#"><img src="../src/imags/icons/shopping_cart_24px.png" alt=""></a></li>
+    <li><a href="#"><img src="../src/imags/icons/notifications_none_24px.png" alt=""></a></li>
+    <li><a href="#"><img src="../src/imags/icons/Mask Group.png" alt=""></a></li>
+    
+  </ul>
+</div>
+
   <h2> large Bouttons with icon  and text</h2>
   <div class="flex p-4">
     <button class="i-btn ibtn-lg"><img src="../src/imags/icons/timelapse_24px.svg" alt=""> Enabled</button>
@@ -49,6 +195,12 @@
     <button class="btn btn-lg " disabled>disabled</button>
     <button class="btn btn-lg btn-outline">Enabled</button>
   </div>
+  
+  
+  
+  
+
+  
   <h2>Medium Bouttons without icon</h2>
   <div class="flex p-4 space-x-3">
     <button class="btn btn-md">Enabled</button>
@@ -80,24 +232,27 @@
   </div>
 
 
-  <!-- datepcker -->
-   
   
-  <div 
-  id="datepicker-inline" 
-  inline-datepicker theme={theme}
-  data-date="02/25/2024" 
-  class="bg-success border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-success focus:border-suring-success block ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-success dark:focus:border-suring-success">
+<div class="m-24 ">
+  <div id="datepicker-inline" inline-datepicker  class="text-lg"></div>
 </div>
 
 
-  
-  
-  
+<div class="m-28">
+  <div class="custom-select select-md">
+    <select class="select-md">
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="2">Option 3</option>
+  </select>
+</div>
+
+
+
   
 <form class="m-7">   
-  <div class="relative w-[400px] h-[37px] border-none">
-      <input type="text" class="bg-white90 w-full h-full placeholder-black60 outline-none border-none" placeholder="Search for courses" required />
+  <div class="relative w-[400px] h-[37px] rounded-sm border-none outline-none focus:border-none active:border-none">
+      <input type="text" class="bg-white90 rounded-sm w-full h-full placeholder-black60 focus:outline-none border-none focus:border-none active:border-none" placeholder="Search for courses" required />
       <button type="button" class="absolute inset-y-0 end-0 flex items-center pe-3">
           <img src="../src/imags/icons/search_24px.png" alt="">
       </button>
@@ -106,22 +261,95 @@
 
 
 
+</div>
+
+
+
  
 
 
 <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
 <script>
-  const theme = {
-  root: {
-    input: {
-      field: {
-        input: {
-          base: 'bg-error'
+  var x, i, j, l, ll, selElmnt, a, b, c;
+/* Look for any elements with the class "custom-select": */
+x = document.getElementsByClassName("custom-select");
+l = x.length;
+for (i = 0; i < l; i++) {
+  selElmnt = x[i].getElementsByTagName("select")[0];
+  ll = selElmnt.length;
+  /* For each element, create a new DIV that will act as the selected item: */
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+  /* For each element, create a new DIV that will contain the option list: */
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < ll; j++) {
+    /* For each option in the original select element,
+    create a new DIV that will act as an option item: */
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+        /* When an item is clicked, update the original select box,
+        and the selected item: */
+        var y, i, k, s, h, sl, yl;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        sl = s.length;
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < sl; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            yl = y.length;
+            for (k = 0; k < yl; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
         }
-      }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+    /* When the select box is clicked, close any other select boxes,
+    and open/close the current select box: */
+    e.stopPropagation();
+    closeAllSelect(this);
+    this.nextSibling.classList.toggle("select-hide");
+    this.classList.toggle("select-arrow-active");
+  });
+}
+
+function closeAllSelect(elmnt) {
+  /* A function that will close all select boxes in the document,
+  except the current select box: */
+  var x, y, i, xl, yl, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  xl = x.length;
+  yl = y.length;
+  for (i = 0; i < yl; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
     }
   }
+  for (i = 0; i < xl; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
   }
+}
+
+/* If the user clicks anywhere outside the select box,
+then close all select boxes: */
+document.addEventListener("click", closeAllSelect);
 </script>
 
 </body>

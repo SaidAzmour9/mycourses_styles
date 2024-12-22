@@ -23,6 +23,7 @@
   .btn {
     @apply bg-primary70 hover:w-[102px] hover:bg-primary80 text-white disabled:opacity-40 rounded-2xl disabled:border disabled:border-black60 disabled:text-black60 disabled:bg-black30 transition-all duration-300 ease-in-out;
   }
+  
 
   .i-btn {
     @apply bg-primary70 p-4 hover:w-[136px] hover:bg-primary80 text-white disabled:opacity-40 rounded-2xl disabled:border disabled:border-black60 disabled:text-black60 disabled:bg-black30 transition-all duration-300 ease-in-out flex items-center justify-center ;
@@ -55,9 +56,29 @@
   }
 
   .datepicker-cell {
-    @apply hover:bg-success text-white active:bg-success focus:bg-success;
+    @apply hover:bg-success text-white  focus:bg-success active:bg-success; 
 }
+.custom-select {
+  @apply text-lg text-black30 border-none outline-none focus:border-none focus:outline-none rounded-3xl;
+}
+
+.select-lg{
+  @apply w-[219px]
+}
+.select-md{
+  @apply w-[133px] 
+}
+
+  
+  .select-selected{
+    @apply bg-white text-black30 rounded-3xl;
+    }
   
 .datepicker svg{}
   
 }
+.logo{
+  @apply w-24
+}
+
+
