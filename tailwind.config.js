@@ -4,7 +4,21 @@ module.exports = {
       "./node_modules/flowbite/**/*.js"
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+    }
+    },
     extend: {
+      backgroundImage: {
+        'right-content': "url('/src/imags/icons/Right-Content.png')",
+        'left-content': "url('/src/imags/icons/VectorHeader.png')",
+      },    
       colors: {
         primary70: '#3DCBB1',
         secondary: '#FFD130',
@@ -44,6 +58,7 @@ module.exports = {
   },
   plugins: [
     require('flowbite/plugin')
+  
 ]
 }
 
