@@ -78,7 +78,9 @@
   
 }
 .logo{
-  @apply w-24
+  @apply w-[150px] h-10
 }
-
+.scrollbar-hide{
+  @apply scrollbar-none
+}
 
