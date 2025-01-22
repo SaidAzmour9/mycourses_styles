@@ -21,8 +21,9 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'right-content': "url('/src/imags/icons/Right-Content.png')",
-        'left-content': "url('/src/imags/icons/VectorHeader.png')",
+        'right-content': "url('https://ibb.co/M7b4WG0')",
+        'left-content': "url('https://ibb.co/M7b4WG0')",
+        
       },
       colors: {
         primary70: '#3DCBB1',

@@ -70,9 +70,12 @@
 }
 
   
-  .select-selected{
+.select-selected{
     @apply bg-white text-black30 rounded-3xl;
-    }
+  }
+
+  
+  
   
 .datepicker svg{}
   

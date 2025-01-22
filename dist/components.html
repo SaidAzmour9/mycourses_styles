@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/dbac9ef2c3.js" crossorigin="anonymous"></script>
+  <style>
+    .bg-right-content {
+    background-image: url("../src/imags/icons/Right-Content.png");
+    background-repeat: no-repeat; /* Ensures the background doesn't repeat */
+    background-size: cover; /* Makes the background cover the entire element */
+    background-position: center; /* Centers the background image */
+    height: 100%; /* Full height */
+    width: 100%; /* Full width */
+  }
+  </style>
 </head>
 <body>
     <header class="">
@@ -41,14 +51,20 @@
         <div class=" md:container md:mx-auto md:mt-10">
             <div class="relative h-[125px] md:h-[400px] bg-success md:rounded-3xl">
                 <div class="absolute flex top-0 left-0 h-full w-full md:rounded-3xl">
-                    <div class="bg-left-content h-full w-3/6 flex justify-between items-center">
-                        <a href="#" class="bg-[#FFFFFF33] h-20 flex justify-center items-center"><img src="../src/imags/icons/regular.png" alt="" class="hidden md:block"></a>
+                    <div class="bg-left-content h-full w-full md:w-3/6 flex justify-between items-center relative">
+                        <a href="#" class="bg-white-opacity-33 h-20 flex justify-center items-center">
+                          <img src="../src/imags/icons/regular.png" alt="Regular icon" class="hidden md:block">
+                        </a>
                         <div class="absolute text-white w-[200px] md:w-[400px] left-3 md:left-[50px] z-10">
-                            <h2 class="font-bold text-lg md:text-5xl ">Learn something new everyday.</h2>
-                            <p class="text-sm md:text-lg font-normal md:mt-2">Become professionals and ready to join the world.</p>
-                            <button class="text-white border-white border rounded-none md:bg-white md:text-success py-2 md:py-3 px-6 text-md md:text-xl font-normal md:rounded-2xl mt-2 md:mt-10 text-left">Explore Photography</button>
+                          <h2 class="font-bold text-lg md:text-5xl">Learn something new every day.</h2>
+                          <p class="text-sm md:text-lg font-normal md:mt-2">Become professionals and ready to join the world.</p>
+                          <button 
+                            class="text-white border-white border rounded-none md:bg-white md:text-success py-2 md:py-3 px-6 text-md md:text-xl font-normal md:rounded-2xl mt-2 md:mt-10 text-left"
+                            aria-label="Explore photography resources">
+                            Explore Photography
+                          </button>
                         </div>
-                    </div>
+                      </div>                      
                     <div class="w-1/6 bg-gradient-to-r from-[#C5322A] to-[#950f0f] hidden md:block">
     
                     </div>
